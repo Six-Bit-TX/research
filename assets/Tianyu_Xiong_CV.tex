@@ -1,0 +1,136 @@
+% Compile with XeLaTeX (twice). No external class, image, or bibliography required.
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,left=18mm,right=18mm,top=16mm,bottom=17mm]{geometry}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\IfFontExistsTF{Lato}{\setmainfont{Lato}}{\setmainfont{TeX Gyre Heros}}
+\IfFontExistsTF{EB Garamond}{\newfontfamily\displayfont{EB Garamond}}{\newfontfamily\displayfont{TeX Gyre Pagella}}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{203238}
+\definecolor{accent}{HTML}{316C6D}
+\definecolor{muted}{HTML}{647175}
+\definecolor{rulecolor}{HTML}{C7D7D5}
+\usepackage[protrusion=false]{microtype}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent,
+  pdftitle={Tianyu Xiong — Curriculum Vitae},pdfauthor={Tianyu Xiong},
+  pdfsubject={3D computer vision, publications, and research experience}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\baselinestretch}{1.08}
+\color{ink}
+\raggedright
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\fontsize{7.6}{9}\selectfont\color{muted}TIANYU XIONG\quad /\quad CURRICULUM VITAE}
+\fancyfoot[R]{\fontsize{7.6}{9}\selectfont\color{muted}OCTOBER 2026\quad\thepage\,/\,\pageref*{LastPage}}
+\setlength{\footskip}{24pt}
+\newcommand{\cvsection}[1]{\par\vspace{10pt}{\fontsize{10.3}{12}\selectfont\bfseries\color{accent}\MakeUppercase{#1}}\par\vspace{4pt}{\color{rulecolor}\hrule height .55pt}\vspace{6pt}}
+\newcommand{\entry}[3]{\textbf{#1}\hfill{\small\color{muted}#2}\par{\small\color{muted}#3}\par\vspace{3pt}}
+\newcommand{\paper}[4]{\textbf{#1}\par\vspace{2pt}{\small #2}\par\vspace{1pt}{\small\color{muted}#3}\quad{\small #4}\par\vspace{9pt}}
+\newcommand{\project}[2]{\vspace{4pt}\textbf{#1}\quad{\small\color{muted}#2}\par\vspace{2pt}}
+\newcommand{\detail}[1]{{\small #1}\par}
+\setlist[itemize]{leftmargin=12pt,itemsep=2pt,topsep=2pt,parsep=0pt,label={\color{accent}\textbullet}}
+\begin{document}
+
+{\displayfont\fontsize{36}{39}\selectfont Tianyu Xiong}\par
+\vspace{5pt}
+{\fontsize{10.4}{13}\selectfont\bfseries\color{accent}Ph.D. Candidate\quad /\quad 3D Computer Vision}\par
+\vspace{9pt}
+{\small
+\href{mailto:tianyuxiong1997@gmail.com}{tianyuxiong1997@gmail.com}\quad\textbar\quad
+\href{https://github.com/Six-Bit-TX}{github.com/Six-Bit-TX}\par
+\vspace{3pt}
+\href{https://six-bit-tx.github.io/research/}{six-bit-tx.github.io/research/}}
+
+\cvsection{Research profile}
+Ph.D. candidate in Computer Science and Technology at Northwestern Polytechnical University. My publications cover 3D reconstruction, Gaussian splatting, watermarking and machine learning.
+
+\cvsection{Education}
+\entry{Northwestern Polytechnical University}{2024–present}{Ph.D. in Computer Science and Technology\hfill Xi'an, China}
+\detail{Supervisors: Yanning Zhang and Yangjia Qi.}
+\vspace{8pt}
+\entry{University of Toronto}{2018–2021}{Honours Bachelor of Science\hfill St. George Campus, Toronto, Canada}
+\detail{Computer Science Specialist.}
+
+\cvsection{Publications}
+\paper{Queryable Gaussian View Index: Text Retrieval and Selective Camera Localization}
+{\textbf{Tianyu Xiong}, Rui Li, Jiaqi Yang.}
+{Manuscript, 2026. Submitted to arXiv.}
+{}
+
+\paper{SalientGS: Unified SfM-to-3DGS with Importance-Guided MCMC Gaussian Allocation}
+{\textbf{Tianyu Xiong}, Rui Li, Suning Ge, Jiaqi Yang.}
+{ACM Multimedia 2026. Accepted.}
+{\href{https://arxiv.org/abs/2607.11285}{arXiv:2607.11285}}
+
+\paper{CAGE-LIVO: Cooperative Air-Ground Gaussian-Enhanced LiDAR-Inertial-Visual Odometry}
+{\textbf{Tianyu Xiong} et al. (first author).}
+{Chinese Journal of Aeronautics. Accepted.}
+{}
+
+\paper{VoMarkSplat: Robust watermarking for 3D Gaussian splatting with patch and multi-convolutional voting}
+{\textbf{Tianyu Xiong}, Linjie Li, Rui Li, Jiaqi Yang, Yanning Zhang.}
+{Pattern Recognition Letters, 203:8–14, May 2026.}
+{\href{https://doi.org/10.1016/j.patrec.2026.02.024}{DOI}}
+
+\paper{GloSplat: Joint Pose-Appearance Optimization for Faster and More Accurate 3D Reconstruction}
+{\textbf{Tianyu Xiong}, Rui Li, Linjie Li, Jiaqi Yang.}
+{Preprint, 2026.}
+{\href{https://arxiv.org/abs/2603.04847}{arXiv:2603.04847}}
+
+\paper{Large scale air pollution prediction with deep convolutional networks}
+{Gao Huang, Chunjiang Ge, \textbf{Tianyu Xiong}, Shiji Song, Le Yang, Baoxian Liu, Wenjun Yin, Cheng Wu.}
+{Science China Information Sciences, 64(9), article 192107, 2021.}
+{\href{https://doi.org/10.1007/s11432-020-2951-1}{DOI}}
+
+\paper{The effect of similarity on the evolution of fairness in the ultimatum game}
+{Yakun Zhao, \textbf{Tianyu Xiong}, Lei Zheng, Yumeng Li, Xiaojie Chen.}
+{Chaos, Solitons \& Fractals, 131, article 109494, February 2020.}
+{\href{https://doi.org/10.1016/j.chaos.2019.109494}{DOI}}
+
+\cvsection{Technical focus \& language}
+\detail{\textbf{Methods:} Gaussian splatting, differentiable rendering, multi-view geometry, neural-network learning and CLIP-based vision–language models.}
+\detail{\textbf{English:} Native-level proficiency.}
+
+\newpage
+{\displayfont\fontsize{22}{26}\selectfont Research \& experience}\par
+\vspace{2pt}
+{\small\color{muted}Tianyu Xiong\quad /\quad 3D computer vision and machine learning}
+
+\renewcommand{\detail}[1]{{\normalsize #1}\par}
+\renewcommand{\cvsection}[1]{\par\vspace{17pt}{\fontsize{10.3}{12}\selectfont\bfseries\color{accent}\MakeUppercase{#1}}\par\vspace{4pt}{\color{rulecolor}\hrule height .55pt}\vspace{9pt}}
+\cvsection{Selected completed research}
+\project{SalientGS}{Fast reconstruction and capacity allocation}
+\detail{Developed a unified reconstruction pipeline that jointly refines camera poses and Gaussian appearance. Importance-guided MCMC allocation directs a fixed Gaussian budget toward persistently underfit regions.}
+\vspace{10pt}
+\project{VoMarkSplat}{Watermarking of 3D Gaussian assets}
+\detail{Developed robust watermark recovery for Gaussian scene assets through spatial-patch voting, multi-convolutional voting and a two-stage training curriculum.}
+
+\cvsection{Earlier research experience}
+\entry{The Hong Kong Polytechnic University}{May 2022–May 2024}{Department of Computing\hfill Hong Kong, China}
+\detail{Advisor: Lei Zhang; collaborative projects with Hongwei Yong.}
+\begin{itemize}
+\item Built a CLIP-based prototype for image cropping guided by content and aesthetic instructions.
+\item Studied feature subsampling during the backward pass of convolutional neural networks and parallelizable feedback mechanisms based on Direct Feedback Alignment.
+\end{itemize}
+\vspace{6pt}
+\entry{Tsinghua University}{May–August 2019}{Department of Automation\hfill Beijing, China}
+\detail{Advisor: Gao Huang. Contributed to spatiotemporal air-pollution prediction with deep convolutional networks, leading to the 2021 Science China Information Sciences publication.}
+\vspace{6pt}
+\entry{Beihang University}{May–August 2018}{School of Electronic and Information Engineering\hfill Beijing, China}
+\detail{Advisor: Xiantong Zhen. Implemented CliqueNet for MURA radiographic image classification.}
+
+\cvsection{Entrepreneurship}
+\entry{Halfman Tech · Co-founder}{May–September 2024}{Beijing, China}
+\detail{Co-founded an early-stage technology company; operations ended in September 2024.}
+
+
+\end{document}

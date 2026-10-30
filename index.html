@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#efeee7">
+  <meta name="description" content="Tianyu Xiong — PhD researcher in 3D computer vision at Northwestern Polytechnical University. Gaussian scene representations, reconstruction, cooperative mapping and trustworthy 3D assets.">
+  <meta property="og:title" content="Tianyu Xiong · Research Archive">
+  <meta property="og:description" content="Exploring how machines reconstruct, represent and understand the three-dimensional world.">
+  <meta property="og:type" content="website">
+  <title>Tianyu Xiong · Research Archive</title>
+  <link rel="canonical" href="https://six-bit-tx.github.io/research/">
+  <link rel="alternate" hreflang="en" href="https://six-bit-tx.github.io/research/">
+  <link rel="alternate" hreflang="zh-CN" href="https://six-bit-tx.github.io/research/zh.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="publications.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="scene.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Tianyu Xiong home"><span class="brand-mark" aria-hidden="true">t<span>×</span></span><span>TIANYU XIONG<small>RESEARCH ARCHIVE</small></span></a>
+    <nav aria-label="Main navigation"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#about">About</a><a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+    <div class="language-switch" role="group" aria-label="Language"><a href="index.html" lang="en" hreflang="en" aria-current="page">EN</a><a href="zh.html" lang="zh-CN" hreflang="zh-CN">中文</a></div>
+    <a class="header-cv" href="assets/Tianyu_Xiong_CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> 3D VISION / SPATIAL INTELLIGENCE</div>
+        <p class="hero-intro">Tianyu Xiong <span lang="zh">熊天宇</span></p>
+        <h1 id="hero-title">Reconstructing<br>the world,<br><span class="serif">in three dimensions.</span></h1>
+        <p class="hero-description">My publications explore 3D reconstruction, visual representation and machine learning—from images to coherent, useful scenes.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#publications">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="assets/Tianyu_Xiong_CV.pdf" download>Curriculum vitae <span aria-hidden="true">↓</span></a></div>
+        <div class="affiliation"><span class="tiny-cross" aria-hidden="true">+</span><span>PhD researcher · Computer Science<br><strong>Northwestern Polytechnical University</strong></span><span class="affiliation-year">2024—<br>PRESENT</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="scene-topline"><span>SPATIAL OBSERVATORY</span><span class="scene-edition">FIG. 001 / INTERACTIVE</span></div>
+        <div id="scene-host" class="scene-host"><canvas id="research-scene" tabindex="0" aria-label="Illustrative interactive 3D scene. Drag horizontally to rotate; use the zoom and motion buttons below."></canvas><div class="scene-corner corner-tl" aria-hidden="true"></div><div class="scene-corner corner-br" aria-hidden="true"></div><span class="scene-axis" aria-hidden="true">Y<br>↑<br>└─ X</span><span class="scene-tag">GAUSSIAN FIELD<br><b>FORM → REPRESENTATION</b></span></div>
+        <div class="scene-toolbar"><div class="scene-modes" role="group" aria-label="Illustration mode"><button class="active" data-scene="reconstruction" aria-pressed="true" title="Reconstruction illustration">01</button><button data-scene="mapping" aria-pressed="false" title="Cooperative mapping illustration">02</button><button data-scene="watermark" aria-pressed="false" title="Watermarking illustration">03</button></div><p id="scene-status" aria-live="polite">Reconstruction</p><div class="scene-controls"><button id="scene-zoom-out" aria-label="Zoom out">−</button><button id="scene-zoom-in" aria-label="Zoom in">+</button><button id="motion-toggle" aria-pressed="false" aria-label="Pause animation"><span data-motion-icon aria-hidden="true">Ⅱ</span></button></div></div>
+        <p class="scene-disclaimer">An illustrative field, not an experimental reconstruction. <span>DRAG TO ROTATE ↔</span></p>
+      </div>
+    </section>
+    <div class="discipline-strip" aria-label="Research themes"><span>01 <b>3D Gaussian Splatting</b></span><span>02 <b>Multi-view Geometry</b></span><span>03 <b>Cooperative Perception</b></span><span>04 <b>Trustworthy 3D Assets</b></span></div>
+    <section id="research" class="research-section section" aria-labelledby="research-title">
+      <div class="section-kicker"><span>01 / RESEARCH</span><span>PERSPECTIVES FROM THE PAPERS</span></div>
+      <div class="research-heading"><h2 id="research-title">From observations<br>to <span class="serif">understanding.</span></h2><p>Explore work on 3D reconstruction, watermarks, environmental prediction and evolutionary game theory through the papers below.</p></div>
+      <div class="research-path">
+        <article><span class="path-number">I</span><h3>Reconstruct</h3><p>Joint camera-pose and appearance optimization for image-based 3D reconstruction.</p><span class="path-project">SalientGS · GloSplat</span></article>
+        <article><span class="path-number">II</span><h3>Watermark</h3><p>Recovering embedded messages from rendered Gaussian scenes through multiple voting mechanisms.</p><span class="path-project">VoMarkSplat</span></article>
+        <article><span class="path-number">III</span><h3>Predict</h3><p>Spatiotemporal air-quality prediction with deep convolutional networks.</p><span class="path-project">Science China Information Sciences · 2021</span></article>
+        <article><span class="path-number">IV</span><h3>Model interaction</h3><p>How similarity-dependent strategies affect fairness in a spatial evolutionary game.</p><span class="path-project">Chaos, Solitons &amp; Fractals · 2020</span></article>
+      </div>
+    </section>
+    <section id="publications" class="publications-section section" aria-labelledby="publications-title">
+      <div class="section-kicker"><span>02 / PUBLICATIONS</span><a href="assets/publications.bib" download>EXPORT BIBLIOGRAPHY <span aria-hidden="true">↗</span></a></div>
+      <div class="publication-heading"><h2 id="publications-title">The research <span class="serif">archive.</span></h2><span class="archive-count" id="archive-total">07 RECORDS</span></div>
+      <div class="archive-toolbar"><div class="filter-group" role="group" aria-label="Filter publications"><button class="filter active" data-filter="all" aria-pressed="true">All work</button><button class="filter" data-filter="reconstruction" aria-pressed="false">Reconstruction</button><button class="filter" data-filter="robotics" aria-pressed="false">Robotics</button><button class="filter" data-filter="watermarking" aria-pressed="false">Watermarking</button><button class="filter" data-filter="learning" aria-pressed="false">Learning & games</button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="paper-search" type="search" placeholder="Search the archive" aria-label="Search papers by title, author or topic"><kbd>/</kbd></label></div>
+      <div class="results-summary" id="results-summary" role="status"></div>
+      <div id="paper-list" class="paper-list"></div>
+      <noscript><p>This interactive archive requires JavaScript. You can read all publications in the <a href="assets/Tianyu_Xiong_CV.pdf">CV</a> or <a href="assets/publications.bib">bibliography</a>.</p></noscript>
+      <p class="archive-note">Journal articles, accepted papers, public preprints and manuscript records.</p>
+    </section>
+    <section id="about" class="about-section section" aria-labelledby="about-title">
+      <div class="section-kicker"><span>03 / ABOUT</span><span>THE PERSON BEHIND THE PAPERS</span></div>
+      <div class="about-layout"><div class="about-copy"><h2 id="about-title">Curiosity,<br><span class="serif">with a geometric bias.</span></h2><p>I’m Tianyu, a PhD researcher at Northwestern Polytechnical University. My academic background is in computer science, computer vision and machine learning.</p><p>I studied computer science at the University of Toronto and have worked on vision and learning research at Hong Kong Polytechnic University, Tsinghua University and Beihang University.</p><a class="text-link" href="assets/Tianyu_Xiong_CV.pdf" download>Read my full CV <span aria-hidden="true">↓</span></a></div>
+      <div class="timeline"><h3 class="eyebrow">EDUCATION & RESEARCH</h3><article><span class="timeline-date">2024—PRESENT</span><div><h4>Northwestern Polytechnical University</h4><p>PhD · Computer Science & Technology</p><small>Supervisors: Yanning Zhang and Yangjia Qi</small></div></article><article><span class="timeline-date">2022—2024</span><div><h4>The Hong Kong Polytechnic University</h4><p>Research · Department of Computing</p><small>Text-driven image cropping and neural-network feedback</small></div></article><article><span class="timeline-date">2018—2021</span><div><h4>University of Toronto</h4><p>Honours Bachelor of Science</p><small>Computer Science Specialist · St. George</small></div></article><article><span class="timeline-date">SUMMER 2019</span><div><h4>Tsinghua University</h4><p>Research · Department of Automation</p><small>Deep learning for air-pollution prediction</small></div></article><article><span class="timeline-date">SUMMER 2018</span><div><h4>Beihang University</h4><p>Research · Electronic & Information Engineering</p><small>CliqueNet for radiographic image classification</small></div></article></div></div>
+    </section>
+    <section id="contact" class="contact-section section" aria-labelledby="contact-title"><div class="section-kicker"><span>04 / CONTACT</span><span>LET’S COMPARE NOTES</span></div><div class="contact-main"><h2 id="contact-title">A different perspective<br>can change <span class="serif">the picture.</span></h2><a class="contact-arrow" href="mailto:tianyuxiong1997@gmail.com" aria-label="Email Tianyu Xiong">↗</a></div><div class="contact-links"><a href="mailto:tianyuxiong1997@gmail.com">tianyuxiong1997@gmail.com <span>↗</span></a><a href="https://github.com/Six-Bit-TX" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="assets/Tianyu_Xiong_CV.pdf" download>CV · English <span>↓</span></a><a href="assets/Tianyu_Xiong_CV_zh.pdf" download lang="zh-CN">简历 · 中文 <span>↓</span></a></div></section>
+  </main>
+  <footer><span>© 2026 Tianyu Xiong</span><span>BUILT AROUND CURIOSITY.</span><a href="https://github.com/LBEILC/RhineLabUI" target="_blank" rel="noopener noreferrer">Visual inspiration: RhineLabUI ↗</a><a href="#" aria-label="Back to top">BACK TO TOP ↑</a></footer>
+  <dialog id="paper-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><div class="dialog-top"><span class="eyebrow">RESEARCH RECORD</span><button id="dialog-close" class="close-button" aria-label="Close paper details">×</button></div><div id="dialog-content"></div></div></dialog>
+  <div id="toast" role="status" class="toast"></div>
+</body>
+</html>

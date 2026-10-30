@@ -1,0 +1,137 @@
+% Compile twice with XeLaTeX; requires xeCJK and Noto CJK fonts.
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,left=18mm,right=18mm,top=16mm,bottom=17mm]{geometry}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\IfFontExistsTF{Lato}{\setmainfont{Lato}}{\setmainfont{TeX Gyre Heros}}
+\usepackage{xeCJK}
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKmainfont{Noto Sans CJK SC}}{\setCJKmainfont{FandolHei-Regular}[BoldFont=FandolHei-Bold]}
+\IfFontExistsTF{Noto Serif CJK SC}{\newCJKfontfamily\displayfont{Noto Serif CJK SC}}{\newCJKfontfamily\displayfont{FandolSong-Regular}[BoldFont=FandolSong-Bold]}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{203238}
+\definecolor{accent}{HTML}{316C6D}
+\definecolor{muted}{HTML}{647175}
+\definecolor{rulecolor}{HTML}{C7D7D5}
+\usepackage[protrusion=false]{microtype}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent,
+  pdftitle={熊天宇 - 学术简历},pdfauthor={Tianyu Xiong},
+  pdfsubject={三维计算机视觉、学术论文与科研经历},pdflang={zh-CN}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\baselinestretch}{1.16}
+\color{ink}
+\raggedright
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\fontsize{7.6}{9}\selectfont\color{muted}熊天宇\quad /\quad 学术简历}
+\fancyfoot[R]{\fontsize{7.6}{9}\selectfont\color{muted}2026 年 10 月\quad\thepage\,/\,\pageref*{LastPage}}
+\setlength{\footskip}{24pt}
+\newcommand{\cvsection}[1]{\par\vspace{10pt}{\fontsize{11}{14}\selectfont\bfseries\color{accent}#1}\par\vspace{4pt}{\color{rulecolor}\hrule height .55pt}\vspace{7pt}}
+\newcommand{\entry}[3]{\textbf{#1}\hfill{\small\color{muted}#2}\par{\small\color{muted}#3}\par\vspace{4pt}}
+\newcommand{\paper}[4]{\textbf{#1}\par\vspace{2pt}{\small #2}\par\vspace{1pt}{\small\color{muted}#3}\quad{\small #4}\par\vspace{9pt}}
+\newcommand{\project}[2]{\vspace{4pt}\textbf{#1}\quad{\small\color{muted}#2}\par\vspace{4pt}}
+\newcommand{\detail}[1]{{\small #1}\par}
+\setlist[itemize]{leftmargin=13pt,itemsep=5pt,topsep=5pt,parsep=0pt,label={\color{accent}\textbullet}}
+\begin{document}
+
+{\displayfont\fontsize{32}{40}\selectfont 熊天宇}\quad{\fontsize{18}{22}\selectfont\color{muted}Tianyu Xiong}\par
+\vspace{6pt}
+{\fontsize{10.5}{14}\selectfont\bfseries\color{accent}博士研究生\quad /\quad 三维计算机视觉}\par
+\vspace{9pt}
+{\small
+\href{mailto:tianyuxiong1997@gmail.com}{tianyuxiong1997@gmail.com}\quad\textbar\quad
+\href{https://github.com/Six-Bit-TX}{github.com/Six-Bit-TX}\par
+\vspace{3pt}
+\href{https://six-bit-tx.github.io/research/zh.html}{six-bit-tx.github.io/research/zh.html}}
+
+\cvsection{个人简介}
+西北工业大学计算机科学与技术专业博士研究生。论文涉及三维重建、高斯泼溅、水印与机器学习。
+
+\cvsection{教育背景}
+\entry{西北工业大学}{2024 年至今}{计算机科学与技术专业，博士研究生\hfill 中国，西安}
+\detail{导师：张艳宁（Yanning Zhang）、Yangjia Qi。}
+\vspace{8pt}
+\entry{多伦多大学}{2018-2021 年}{荣誉理学学士\hfill 圣乔治校区，加拿大，多伦多}
+\detail{专业方向：Computer Science Specialist。}
+
+\cvsection{学术论文}
+\paper{Queryable Gaussian View Index: Text Retrieval and Selective Camera Localization}
+{\textbf{Tianyu Xiong}, Rui Li, Jiaqi Yang.}
+{稿件，2026 年。已提交 arXiv。}
+{}
+
+\paper{SalientGS: Unified SfM-to-3DGS with Importance-Guided MCMC Gaussian Allocation}
+{\textbf{Tianyu Xiong}, Rui Li, Suning Ge, Jiaqi Yang.}
+{ACM Multimedia 2026，已录用。}
+{\href{https://arxiv.org/abs/2607.11285}{arXiv:2607.11285}}
+
+\paper{CAGE-LIVO: Cooperative Air-Ground Gaussian-Enhanced LiDAR-Inertial-Visual Odometry}
+{\textbf{Tianyu Xiong} et al.（第一作者）}
+{Chinese Journal of Aeronautics，已录用。}
+{}
+
+\paper{VoMarkSplat: Robust watermarking for 3D Gaussian splatting with patch and multi-convolutional voting}
+{\textbf{Tianyu Xiong}, Linjie Li, Rui Li, Jiaqi Yang, Yanning Zhang.}
+{Pattern Recognition Letters, 203:8-14，2026 年 5 月。}
+{\href{https://doi.org/10.1016/j.patrec.2026.02.024}{DOI}}
+
+\paper{GloSplat: Joint Pose-Appearance Optimization for Faster and More Accurate 3D Reconstruction}
+{\textbf{Tianyu Xiong}, Rui Li, Linjie Li, Jiaqi Yang.}
+{预印本，2026 年。}
+{\href{https://arxiv.org/abs/2603.04847}{arXiv:2603.04847}}
+
+\paper{Large scale air pollution prediction with deep convolutional networks}
+{Gao Huang, Chunjiang Ge, \textbf{Tianyu Xiong}, Shiji Song, Le Yang, Baoxian Liu, Wenjun Yin, Cheng Wu.}
+{Science China Information Sciences, 64(9)，文章号 192107，2021 年。}
+{\href{https://doi.org/10.1007/s11432-020-2951-1}{DOI}}
+
+\paper{The effect of similarity on the evolution of fairness in the ultimatum game}
+{Yakun Zhao, \textbf{Tianyu Xiong}, Lei Zheng, Yumeng Li, Xiaojie Chen.}
+{Chaos, Solitons \& Fractals, 131，文章号 109494，2020 年 2 月。}
+{\href{https://doi.org/10.1016/j.chaos.2019.109494}{DOI}}
+
+\cvsection{技术方法与语言能力}
+\detail{\textbf{技术方法：}高斯泼溅、可微渲染、多视几何、神经网络学习与基于 CLIP 的视觉语言模型。}
+\detail{\textbf{英语：}母语水平。}
+
+\newpage
+{\displayfont\fontsize{23}{31}\selectfont 研究与经历}\par
+\vspace{4pt}
+{\small\color{muted}熊天宇\quad /\quad 三维计算机视觉与机器学习}
+
+\renewcommand{\detail}[1]{{\fontsize{10.5}{17}\selectfont #1}\par}
+\renewcommand{\cvsection}[1]{\par\vspace{20pt}{\fontsize{11}{14}\selectfont\bfseries\color{accent}#1}\par\vspace{5pt}{\color{rulecolor}\hrule height .55pt}\vspace{11pt}}
+\cvsection{已完成研究选介}
+\project{SalientGS}{快速重建与容量分配}
+\detail{构建统一重建流程，对相机位姿与高斯外观进行联合优化。通过重要性引导的 MCMC 分配，将固定高斯预算优先用于持续欠拟合的区域。}
+\vspace{13pt}
+\project{VoMarkSplat}{三维高斯资产水印}
+\detail{通过空间分块投票、多卷积投票及两阶段课程训练，实现高斯场景资产的鲁棒水印恢复。}
+
+\cvsection{早期科研经历}
+\entry{香港理工大学}{2022 年 5 月至 2024 年 5 月}{电子计算学系\hfill 中国，香港}
+\detail{导师：Lei Zhang；与 Hongwei Yong 合作开展研究项目。}
+\begin{itemize}
+\item 构建基于 CLIP 的图像裁剪原型，支持内容与美学指令引导。
+\item 研究卷积神经网络反向传播中的特征子采样，以及基于直接反馈对齐（Direct Feedback Alignment）的可并行反馈机制。
+\end{itemize}
+\vspace{10pt}
+\entry{清华大学}{2019 年 5 月至 8 月}{自动化系\hfill 中国，北京}
+\detail{导师：Gao Huang。参与基于深度卷积网络的时空空气污染预测研究，相关论文于 2021 年发表于 Science China Information Sciences。}
+\vspace{14pt}
+\entry{北京航空航天大学}{2018 年 5 月至 8 月}{电子信息工程学院\hfill 中国，北京}
+\detail{导师：Xiantong Zhen。实现 CliqueNet，并用于 MURA 放射影像分类。}
+
+\cvsection{创业经历}
+\entry{Halfman Tech / 联合创始人}{2024 年 5 月至 9 月}{中国，北京}
+\detail{联合创办早期科技企业；公司于 2024 年 9 月停止运营。}
+
+\end{document}
